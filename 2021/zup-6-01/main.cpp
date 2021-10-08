@@ -1,5 +1,5 @@
 #include <iostream>
-#include <bits/stdc++.h>
+#include <algorithm>
 
 using namespace std;
 
@@ -21,8 +21,7 @@ int main()
 {
     int a[5];
     for(int i = 0; i < 5; i++) cin >> a[i];
-    int s = sizeof(a) / sizeof(a[0]);
-    sort(a, a + s);
+    sort(begin(a), end(a));
     if(isTriple(a[4], a[3], a[2])){
         cout << "DA" << endl;
         cout << calcSum(a[4], a[3], a[2]) << endl;
